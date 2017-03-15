@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+
+public class huixuanshu {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input=new Scanner(System.in);
+		System.out.println("输入一个大写字母:");
+		char c=input.next().charAt(0);
+		
+		char d=(char)(c+32);
+		
+		System.out.println("对应的小写是"+d);
+				
+
+	}
+
+}
