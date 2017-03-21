@@ -1,0 +1,33 @@
+import java.util.Random;//随机数
+import java.util.Scanner;//控制台输入
+
+
+public class ProjectForJunior {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		//为一年级小学生编写一位数加法运算练习程序。程序开始运行随机生成两个一位数
+		//让学生输入计算结果，程序给出结果是否正确
+		
+		Scanner input=new Scanner(System.in);
+		Random r=new Random();
+		
+		int r1=r.nextInt(10);//生成0-9的一个随机数r1
+		int r2=r.nextInt(10);//生成0-9的一个随机数r2
+		
+		System.out.println("请计算"+r1+"+"+r2+"的结果");//控制台显示"请计算'两个随机数'相加的结果"
+		int result=input.nextInt();//控制台输入一个整型数字赋值给变量result
+		
+		if (result==r1+r2) {
+			System.out.println("恭喜你算对啦！");
+			
+		} else {
+			System.out.println("很可惜算错了，再来一次吧");
+
+		}//if else结构判断是否计算正确
+
+	}
+
+}
