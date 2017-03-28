@@ -1,0 +1,29 @@
+import java.util.Random;
+import java.util.Scanner;
+
+
+public class Homework2 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		//输入三位会员卡号，如果十位与随机数相同则为幸运会员
+	    Scanner input=new Scanner(System.in);
+	    Random r=new Random();
+	    System.out.println("请输入3位会员卡号");
+	    int num=input.nextInt();
+	    int i=r.nextInt(10);
+	    if (num/10%10==i) {
+	    	System.out.println("恭喜你是幸运会员");
+			
+		} else {
+			System.out.println("谢谢惠顾");
+
+		}
+	    
+	   
+	
+	}
+	
+}
