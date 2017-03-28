@@ -1,0 +1,39 @@
+import java.util.Random;
+import java.util.Scanner;
+
+
+public class Homework2 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+	    Scanner input=new Scanner(System.in);
+	    Random r=new Random();
+	    System.out.println("请出拳(1代表石头，2代表剪刀，3代表布)");
+	    int num=input.nextInt();
+	    int i=r.nextInt(3)+1;
+	    if (num==i) {
+	    	System.out.println("平局！");
+			
+		} else if(num==1&i==2) {
+			System.out.println("你赢啦");
+		} else if(num==1&i==3) {
+			System.out.println("你输啦");
+		} else if(num==2&i==1) {
+			System.out.println("你输啦");
+		} else if(num==2&i==3) {
+			System.out.println("你赢啦");
+		} else if(num==3&i==1) {
+			System.out.println("你赢啦");
+		} else if(num==3&i==2) {
+			System.out.println("你输啦");
+		} else {
+			System.out.println("你出的不正确哦");
+			
+			
+		}
+	}
+			
+		
+}
