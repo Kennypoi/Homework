@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class TextWhile {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		//假设密码是123，输入错误重新输入，直到正确为止
+		Scanner input=new Scanner(System.in);
+		System.out.println("请输入密码");
+		int pw=input.nextInt();//pw=pass word
+		
+		while (pw!=123) {
+			if (pw!=123) {
+				System.out.println("输入错误重新输入");
+				
+			}
+			pw=input.nextInt();
+			
+		}
+		System.out.println("登录成功");
+
+
+	}
+}
+
