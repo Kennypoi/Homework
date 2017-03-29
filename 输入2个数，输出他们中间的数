@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+
+public class TextWhile {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		//输入2个数，输出他们中间的数
+		Scanner input=new Scanner(System.in);
+		System.out.println("输入两个数");
+		int a=input.nextInt();
+		int b=input.nextInt();
+		while (a<b-1) {
+			a++;
+			System.out.println(a);
+			
+		}
+
+	}
+
+}
