@@ -1,0 +1,74 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Scanner;
+
+import javax.swing.text.StyledEditorKit.ForegroundAction;
+
+
+public class Test {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			Scanner input=new Scanner(System.in);
+			double []score=new double[5];
+			double sum=0;
+			for (int i = 0; i < score.length; i++) {
+				System.out.println("请输入第"+(i+1)+"个学生成绩");
+				score[i]=input.nextDouble();
+			}
+			Arrays.sort(score);//排序
+				
+			
+			System.out.println("学生成绩为");
+			for (int i = 0; i < score.length; i++) {
+				System.out.println(score[i]);
+			
+			}
+			//总分平均分
+			for (int i = 0; i < score.length; i++) {
+				sum+=score[i];
+			}
+			System.out.println("总分为"+sum);
+			System.out.println("平均分为"+sum/5);
+			
+			//最值
+			double max=score[0];
+			for (int i = 0; i < score.length; i++) {
+				
+				if (score[i]>max) {
+					max=score[i];
+				}
+			}
+			double min=score[0];
+			for (int i = 0; i < score.length; i++) {
+				
+				if (score[i]<min) {
+					min=score[i];
+					
+				}
+			}	
+			    System.out.println("最大值为"+max);
+			    System.out.println("最小值为"+min);
+			    
+			    //定义新数组加分
+			    double []score1=new double[5];
+			    for (int i = 0; i < score.length; i++) {
+			    	score1[i]=score[i]+5;
+			    	
+					
+				}
+			    System.out.println("加分后成绩为");
+			    for (int i = 0; i < score.length; i++) {
+					System.out.println(score1[i]);
+			
+	}
+			
+	}
+			
+}
+
+			
+		
