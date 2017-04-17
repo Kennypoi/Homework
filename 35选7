@@ -1,0 +1,37 @@
+import java.util.*;
+
+
+public class TextRandomArrays {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//做一个35选7的程序吧！
+		int []a=new int[7];
+		Random r=new Random();
+		for (int i = 0; i < 7; i++) {
+			a[i]=r.nextInt(36);
+			
+		}
+		
+		for (int i : a) {
+			System.out.println(i);
+		}
+//_______下边是最值以及排序______			
+//		Arrays.sort(a);//升序排列了
+//		
+//		System.out.println("最大是"+a[6]);
+//		System.out.println("最小是"+a[0]);
+//		System.out.println("排序后的数列为");
+//		
+//		for (int i : a) {
+//			System.out.println(i+",");
+			
+//		}
+		
+
+	}
+
+}
