@@ -71,8 +71,7 @@ public class Test {
 				}
 			}	
 			    System.out.println("最大值为"+max);
-			    System.out.println("最小值为"+min);
-/*这里没有限制为上限100分！			    
+			    System.out.println("最小值为"+min);			    
 			    //定义新数组加分
 			   double []scoreplus=new double[5];
 			for (int i = 0; i < scoreplus.length; i++) {
