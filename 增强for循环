@@ -1,0 +1,22 @@
+
+public class Textforeach {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// 
+		int []a={1,5,3,2,6};
+		
+		//增强for循环
+		
+		for (int i : a) {
+			System.out.println(i);
+			
+		}
+		
+		
+
+	}
+
+}
