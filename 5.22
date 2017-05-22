@@ -1,0 +1,141 @@
+import java.util.*;
+public class Method {
+	 Scanner input=new Scanner(System.in);
+	 //判断闰年方法
+	 public boolean isRun(int year){
+		 if (year%4==0&&year%100!=0||year%400==0) {
+			System.out.println("是闰年");
+		} else {
+			System.out.println("是平年");
+		}
+		 return false;
+	 }
+	 //根据年份，月份，求该月的天数
+	 public int getDays(int year,int month){
+		 int days=0;
+		 switch (month) {
+		case 4:
+		case 6:
+		case 9:
+		case 11:
+			days=30;
+			break;
+		case 2:
+			if (isRun(year)) {
+				days=23;
+			}
+			else{
+				days=28;
+			}
+			break;
+
+		default:
+			days=31;
+			break;
+		}
+		 return days;
+	 }
+	 
+//	 //菜单切换
+//	 1.登录
+//	 2.注册
+//	 3.幸运抽奖
+//	 4.购物结算
+//	 5.退出
+//	 
+//	 选择每一项都会进入子菜单，子菜单又可以返回主菜单
+	 public void mainMenu(){
+		 System.out.println("1.登录");
+		 System.out.println("2.注册");
+		 System.out.println("3.幸运抽奖");
+		 System.out.println("4.购物结算");
+		 System.out.println("5.退出");
+	 
+	  int i=input.nextInt();
+	 if (i==1) {
+		login();
+	}
+	 if (i==2) {
+		register();
+	}
+	 if (i==3) {
+		lucky();
+	}
+	 if (i==4) {
+		pay();
+	}
+	 if (i==5) {
+		exit();
+	}
+	 
+	} 
+	
+	 
+	 public void login(){
+		 System.out.println("请输入用户名");
+		 String name=input.next();
+		 System.out.println("请输入密码");
+		 String psw=input.next();
+		 
+		 if (name.equals("admin")&&psw.equals("admin")) {
+			System.out.println("登录成功");
+		}
+		 else{
+			 System.out.println("用户名或密码有误");
+		 }
+		 returnMain();
+		 }
+	 
+	 public void register(){
+		 System.out.println("请输入用户名");
+		 String name=input.next();
+		 System.out.println("请输入密码");
+		 String psw=input.next();
+		 System.out.println("注册成功！");
+		 returnMain();
+	 }
+	 
+	 public void lucky(){
+		 //输入三位会员号，如果十位与随机数相同则为幸运会员
+		 int i=input.nextInt();
+		 Random r=new Random();
+		 int r1=r.nextInt(10);
+		 if (i/10%10==r1) {
+			System.out.println("恭喜你是幸运会员");
+		}
+		else{
+			System.out.println("很遗憾");
+		}
+		returnMain();
+	 }
+	 
+	 public void pay(){
+		 System.out.println("请输入商品");
+	 }
+	 
+	 public void returnMain(){
+		 System.out.println("请选择：1.返回上一层\n2.退出");
+		 int i=input.nextInt();
+		 if (i==1) {
+			mainMenu();
+		}
+		if(i==2){
+		System.out.println("谢谢使用");	 
+		}
+		else{
+			System.out.println("输入有误请重新输入");
+			returnMain();
+		}
+	 }
+	 
+	 public void exit(){
+		 System.out.println("谢谢使用，再见");
+	 }
+
+}
+
+
+
+
+
+
